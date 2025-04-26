@@ -1,0 +1,27 @@
+{
+    "version": 2,
+    "framework": null,
+    "functions": {
+        "backend/main.py": {
+            "handler": "main:app",
+            "runtime": "python"
+        }
+    },
+    "routes": [
+        {
+            "src": "/subir/(.*)",
+            "dest": "backend/main.py"
+        },
+        {
+            "src": "/reportes/(.*)",
+            "dest": "backend/main.py"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "public/$1"
+        }
+    ],
+    "env": {
+        "PYTHONPATH": "./backend"
+    }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Tiempo Trabajado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Certificación de Servicios</h1>
+        <div class="user-selection">
+            <button onclick="selectUser('usuario1')">Anita</button>
+            <button onclick="selectUser('usuario2')">Lilian</button>
+            <button onclick="selectUser('usuario3')">Ricardo</button>
+        </div>
+        <p>Usuario Seleccionado: <span id="selected-user">Ninguno</span></p>
+        <form id="upload-form">
+            <label for="pdf-file">Subir PDF:</label>
+            <input type="file" id="pdf-file" accept=".pdf" required>
+            <label for="end-date">Fecha de Finalización (dd/mm/aa, opcional):</label>
+            <input type="text" id="end-date" placeholder="dd/mm/aa">
+            <button type="submit">Calcular</button>
+        </form>
+        <div id="result" style="display: none;">
+            <h2>Resultados</h2>
+            <p>Días Totales Trabajados: <span id="total-days"></span></p>
+            <p>Calculado Hasta: <span id="end-date-result"></span></p>
+            <a id="download-pdf" href="#">Descargar Reporte PDF</a><br>
+            <a id="download-word" href="#">Descargar Reporte Word</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
