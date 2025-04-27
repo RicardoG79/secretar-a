@@ -76,9 +76,9 @@ def extraer_periodos_de_pdf(contenido_archivo):
             mes = coincidencia_emision.group(2)
             anio = coincidencia_emision.group(3)
             # Mapear texto en español a números
-            mapa_dias = {"veinticinco": "25"}
-            mapa_meses = {"abril": "04"}
-            mapa_anios = {"veinticinco": "25"}
+            mapa_dias = {"veinticinco": "25", "uno": "01", "dos": "02", "tres": "03"}
+            mapa_meses = {"abril": "04", "enero": "01", "febrero": "02", "marzo": "03"}
+            mapa_anios = {"veinticinco": "25", "veinticuatro": "24"}
             fecha_emision = f"{mapa_dias.get(dia, '01')}/{mapa_meses.get(mes, '01')}/{mapa_anios.get(anio, '25')}"
         
         # Extraer filas de la tabla
